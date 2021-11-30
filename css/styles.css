@@ -1,0 +1,211 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url('../img/quran.jpg');
+	background-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	font-size: 30px;
+	color: white;
+	font-weight: bold;
+}
+
+.container {
+	width: 1200px;
+	height: 800px;
+	overflow: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.interface {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.interface img{
+	border-radius: 40%;
+	margin-left: 40px;
+	border: 3px solid white;
+
+}
+
+.interface h1 {
+	font-size: 90px;
+	font-weight: bold;
+	margin-left: 40px;
+	text-shadow: 4px 4px 5px white;
+}
+
+.timePage, .quranPage{
+	
+	width: 300px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	border: 4px solid white;
+	border-radius: 30px;
+	background-color: black;
+}
+
+.quranPage{
+	margin-top: 10px;
+}
+
+
+
+.timePage a div, .quranPage a div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 292px;
+	height: 42px;
+	border-radius: 30px;
+
+}
+
+a div:hover {
+	background-color: white;
+	color: black;
+
+}
+
+.quranPage:hover{
+	border: 4px solid black;
+
+}
+
+.timePage:hover{
+	border: 4px solid black;
+
+}
+
+.prayerTimes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
+}
+
+.timesList{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 750px;
+	height: 110px;
+	padding: 0;
+	margin-right: auto;
+	margin-left: auto;
+	border: 3px solid white;
+	border-radius: 5px;
+	margin-top: 60px;
+	
+}
+
+.timesList li{
+	width: 90px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: #F9F7EF;
+	border-radius: 8px;
+	border: 2px solid black;
+}
+
+.timesList li h3{
+	font-size: 25px;
+	margin-bottom: 10px;
+	margin-top: 14px;
+}
+
+.timesList li span{
+	font-size: 20px;
+}
+
+.days{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 300px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid whitesmoke;
+	border-radius: 10px;
+	color: white;
+}
+
+.days p, .days span{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+input {
+	display: flex;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 8px;
+	font-size: 24px;
+}
+
+.heading{
+	text-align: center;
+	text-shadow: 2px 3px 3px #fff;
+}
+
+#head{
+	width: 600px;
+	height: 380px;
+	background-color: white;
+	opacity: 0.7;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	overflow: auto;
+	border-radius: 5px;
+	border: 3px solid black;
+}	
+
+#head h3{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.list li:hover{
+	background-color: black;
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.playAudio {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+

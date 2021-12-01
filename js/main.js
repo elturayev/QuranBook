@@ -25,16 +25,25 @@ async function timesPrayer(){
 		method: 'GET'
 	})
 	let response =  (await times.json())
-	bomdod.textContent =(response.results.datetime[0].times.Fajr).split(':')[0] + ':' + (((+(response.results.datetime[0].times.Fajr).split(':')[1] + 12)+'').padStart(2,0))
-	quyosh.textContent = (response.results.datetime[0].times.Sunrise).split(':')[0] + ':' + (((+(response.results.datetime[0].times.Sunrise).split(':')[1] + 5)+'').padStart(2,0))
+
+	bomdod.textContent = timeRender((response.results.datetime[0].times.Fajr).split(':')[0], (+(response.results.datetime[0].times.Fajr).split(':')[1] + 12))
+	quyosh.textContent = timeRender((response.results.datetime[0].times.Sunrise).split(':')[0], (+(response.results.datetime[0].times.Sunrise).split(':')[1] + 5))
 	peshin.textContent = response.results.datetime[0].times.Dhuhr
-	asr.textContent = (+(response.results.datetime[0].times.Asr).split(':')[0] + 1) + ':' + (((+(response.results.datetime[0].times.Asr).split(':')[1] - 22)+'').padStart(2,0))
-	shom.textContent = (response.results.datetime[0].times.Maghrib).split(':')[0] + ':' + (((+(response.results.datetime[0].times.Maghrib).split(':')[1] - 14)+'').padStart(2,0))
-	xufton.textContent = (response.results.datetime[0].times.Isha).split(':')[0] + ':' + (((+(response.results.datetime[0].times.Isha).split(':')[1] - 11)+'').padStart(2,0))
+	asr.textContent = timeRender((+(response.results.datetime[0].times.Asr).split(':')[0] + 1), (+(response.results.datetime[0].times.Asr).split(':')[1] - 22))
+	shom.textContent = timeRender((response.results.datetime[0].times.Maghrib).split(':')[0], (+(response.results.datetime[0].times.Maghrib).split(':')[1] - 14))
+	xufton.textContent = timeRender((response.results.datetime[0].times.Isha).split(':')[0], (+(response.results.datetime[0].times.Isha).split(':')[1] - 11))
 	date.textContent = response.results.datetime[0].date.gregorian
 
 }
 timesPrayer()
+
+function timeRender(hours,minuts){
+	if (minuts > 59) {
+		hours = hours[0]+(+hours[1] + 1)
+		minuts = minuts - 60
+	}
+	return (hours + ':' + (minuts + '').padStart(2,0))
+}
 
 let heading = document.querySelector('.heading')
 async function geting(){
